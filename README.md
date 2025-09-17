@@ -62,9 +62,6 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-
-## 🖼️ Demo Screenshot
-
 # Clone the repository
 git clone <your-repo-link>
 cd Health_Tracker
@@ -82,12 +79,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-## 🖼️ Demo Screenshot
-
-![Health Tracker Demo](./static/demo-screenshot.png)
-
-
-
 
 Health_Tracker/
 ├── app.py
@@ -106,17 +97,4 @@ Health_Tracker/
 
 
 
-Health_Tracker/
-├── app.py
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── dashboard.html
-│   ├── form.html
-│   └── edit.html
-├── static/
-│   └── style.css
-├── .env
-├── requirements.txt
-├── Procfile
-└── README.md
+
