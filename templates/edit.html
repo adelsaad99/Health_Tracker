@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Edit Health Data{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Edit Health Data</h2>
+
+<!-- edit form -->
+<form method="POST">
+    <div class="mb-3">
+        <label>Date</label>
+        <input type="date" name="date" class="form-control" value="{{ record.date }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Exercise (minutes)</label>
+        <input type="number" name="exercise" class="form-control" value="{{ record.exercise }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Meditation (minutes)</label>
+        <input type="number" name="meditation" class="form-control" value="{{ record.meditation }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Sleep (hours)</label>
+        <input type="number" name="sleep" class="form-control" value="{{ record.sleep }}" required>
+    </div>
+    
+    <!-- buttons -->
+    <button type="submit" class="btn btn-success">Update</button>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

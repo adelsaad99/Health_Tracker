@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Health Dashboard</h2>
+
+<!-- chart -->
+<canvas id="healthChart" height="100"></canvas>
+
+<!-- table of records -->
+<h3 class="mt-5">All Records</h3>
+<table class="table table-striped mt-3">
+<thead>
+<tr>
+<th>Date</th>
+<th>Exercise</th>
+<th>Meditation</th>
+<th>Sleep</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for record in data %}
+<tr>
+<td>{{ record.date }}</td>
+<td>{{ record.exercise }}</td>
+<td>{{ record.meditation }}</td>
+<td>{{ record.sleep }}</td>
+<td>
+<a href="{{ url_for('edit_data', id=record.id) }}" class="btn btn-sm btn-warning">Edit</a>
+<a href="{{ url_for('delete_data', id=record.id) }}" class="btn btn-sm btn-danger">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<a href="{{ url_for('add_data') }}" class="btn btn-primary mt-3">Add New Data</a>
+
+<!-- pass python data to js -->
+<script id="health-data" type="application/json">
+{{ {
+"dates": dates,
+"exercise_data": exercise_data,
+"meditation_data": meditation_data,
+"sleep_data": sleep_data
+}|tojson|safe }}
+</script>
+
+<!-- chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// grab data from hidden script
+const dataEl = document.getElementById("health-data");
+window.healthData = JSON.parse(dataEl.textContent);
+
+// setup chart
+const ctx = document.getElementById('healthChart').getContext('2d');
+new Chart(ctx, {
+type: 'line',
+data: {
+labels: window.healthData.dates,
+datasets: [
+{ label: 'Exercise (min)', data: window.healthData.exercise_data, borderColor: 'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235, 0.2)', tension: 0.3 },
+{ label: 'Meditation (min)', data: window.healthData.meditation_data, borderColor: 'rgba(255, 206, 86, 1)', backgroundColor: 'rgba(255, 206, 86, 0.2)', tension: 0.3 },
+{ label: 'Sleep (hours)', data: window.healthData.sleep_data, borderColor: 'rgba(153, 102, 255, 1)', backgroundColor: 'rgba(153, 102, 255, 0.2)', tension: 0.3 }
+]
+},
+options: {
+responsive: true,
+plugins: { tooltip: { mode: 'index', intersect: false }, legend: { labels: { font: { size: 14 } } } },
+interaction: { mode: 'nearest', axis: 'x', intersect: false },
+scales: { y: { beginAtZero: true }, x: {} }
+}
+});
+});
+</script>
+
+{% endblock %}

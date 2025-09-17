@@ -1,0 +1,96 @@
+/* Body background and font */
+body {
+background-color: #f0f2f5; /* Light gray background */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font style */
+color: #343a40; /* Dark text color */
+}
+
+/* Headings style */
+h1, h2, h3 {
+color: #212529; /* Heading text color */
+font-weight: 600; /* Make headings bold */
+}
+
+/* Primary button */
+.btn-primary {
+background-color: #007bff; /* Blue background */
+border-color: #007bff; /* Blue border */
+transition: 0.3s; /* Smooth hover effect */
+}
+.btn-primary:hover {
+background-color: #0056b3; /* Darker blue on hover */
+border-color: #0056b3; /* Darker border on hover */
+}
+
+/* Success button */
+.btn-success {
+background-color: #28a745; /* Green background */
+border-color: #28a745; /* Green border */
+transition: 0.3s; /* Smooth hover effect */
+}
+.btn-success:hover {
+background-color: #1e7e34; /* Darker green on hover */
+border-color: #1e7e34; /* Darker border on hover */
+}
+
+/* Warning button */
+.btn-warning {
+background-color: #ffc107; /* Yellow background */
+border-color: #ffc107; /* Yellow border */
+}
+
+/* Danger button */
+.btn-danger {
+background-color: #dc3545; /* Red background */
+border-color: #dc3545; /* Red border */
+}
+
+/* Table style */
+.table {
+background-color: #ffffff; /* White table */
+border-radius: 8px; /* Rounded corners */
+overflow: hidden; /* Hide overflow */
+box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Light shadow */
+}
+
+.table th {
+background-color: #007bff; /* Blue header background */
+color: #ffffff; /* White text */
+font-weight: 500; /* Medium bold text */
+}
+
+.table td {
+vertical-align: middle; /* Align text vertically */
+}
+
+/* Chart container */
+canvas#healthChart {
+background-color: #ffffff; /* White background */
+border-radius: 12px; /* Rounded corners */
+padding: 20px; /* Inner spacing */
+box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* Navbar style */
+.navbar {
+box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Small shadow under navbar */
+}
+
+/* Input fields */
+input.form-control {
+border-radius: 6px; /* Rounded corners */
+border: 1px solid #ced4da; /* Light gray border */
+padding: 10px; /* Inner spacing */
+}
+
+/* Labels */
+label {
+font-weight: 500; /* Medium bold text */
+}
+
+/* General button spacing */
+.btn {
+margin-top: 5px; /* Space above button */
+margin-right: 5px; /* Space on the right */
+}
+

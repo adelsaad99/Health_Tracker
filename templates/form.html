@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Add Health Data{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Add Daily Health Data</h2>
+
+<!-- add data form -->
+<form method="POST">
+    <div class="mb-3">
+        <label>Date</label>
+        <input type="date" name="date" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Exercise (minutes)</label>
+        <input type="number" name="exercise" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Meditation (minutes)</label>
+        <input type="number" name="meditation" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Sleep (hours)</label>
+        <input type="number" name="sleep" class="form-control" required>
+    </div>
+    
+    <!-- buttons -->
+    <button type="submit" class="btn btn-primary">Add Data</button>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+</form>
+{% endblock %}

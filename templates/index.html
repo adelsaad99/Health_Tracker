@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Welcome to Health Tracker</h2>
+
+<!-- button to add new data -->
+<a href="{{ url_for('add_data') }}" class="btn btn-primary mb-4">Add New Data</a>
+
+<!-- summary cards -->
+<div class="row mb-4">
+<div class="col-md-4">
+<div class="card text-white bg-primary mb-3">
+<div class="card-header">Total Exercise (min)</div>
+<div class="card-body">
+<h5 class="card-title">{{ total_exercise }}</h5>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card text-white bg-success mb-3">
+<div class="card-header">Average Meditation (min)</div>
+<div class="card-body">
+<h5 class="card-title">{{ avg_meditation }}</h5>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card text-white bg-warning mb-3">
+<div class="card-header">Average Sleep (hours)</div>
+<div class="card-body">
+<h5 class="card-title">{{ avg_sleep }}</h5>
+</div>
+</div>
+</div>
+</div>
+
+<!-- last 3 records table -->
+<h3>Last 3 Records</h3>
+<table class="table table-striped mt-3">
+<thead>
+<tr>
+<th>Date</th>
+<th>Exercise</th>
+<th>Meditation</th>
+<th>Sleep</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for record in last_records %}
+<tr>
+<td>{{ record.date }}</td>
+<td>{{ record.exercise }}</td>
+<td>{{ record.meditation }}</td>
+<td>{{ record.sleep }}</td>
+<td>
+<!-- action buttons -->
+<a href="{{ url_for('edit_data', id=record.id) }}" class="btn btn-sm btn-warning">Edit</a>
+<a href="{{ url_for('delete_data', id=record.id) }}" class="btn btn-sm btn-danger">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
