@@ -13,11 +13,9 @@ A simple **Flask** web application to **log and monitor daily health activities*
 It provides summaries, detailed records, and interactive charts to track your progress over time.
 
 ---
+## 🖼️ Demo Screenshot
 
-## 🌐 Live Demo
-
-Check out the Health Tracker live application here:  
-👉 [https://health-tracker-52ab.onrender.com/)
+![Health Tracker Demo](./static/demo-screenshot.png)
 
 ---
 
@@ -39,8 +37,12 @@ Check out the Health Tracker live application here:
 - 🔧 **Jinja2**
 
 ---
+## 🌐 Live Demo
 
+Check out the Health Tracker live application here:  
+👉 [https://health-tracker-52ab.onrender.com/)
 
+---
 ## 💻 Installation & Setup
 
 ```bash
