@@ -36,7 +36,7 @@ It provides summaries, detailed records, and interactive charts to track your pr
 ## 🌐 Live Demo
 
 Check out the Health Tracker live application here:  
-👉 [https://article-hub-1-e23v.onrender.com/](https://article-hub-1-e23v.onrender.com/)
+👉 [https://health-tracker-52ab.onrender.com/)
 
 ---
 
