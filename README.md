@@ -14,6 +14,13 @@ It provides summaries, detailed records, and interactive charts to track your pr
 
 ---
 
+## 🌐 Live Demo
+
+Check out the Health Tracker live application here:  
+👉 [https://health-tracker-52ab.onrender.com/)
+
+---
+
 ### ⚡ Features
 - 🏠 **Home Page:** Shows total exercise, average meditation, average sleep, and last three records.
 - ➕ **Add Data:** Log daily health metrics through a simple form.
@@ -33,12 +40,6 @@ It provides summaries, detailed records, and interactive charts to track your pr
 
 ---
 
-## 🌐 Live Demo
-
-Check out the Health Tracker live application here:  
-👉 [https://health-tracker-52ab.onrender.com/)
-
----
 
 ## 💻 Installation & Setup
 
