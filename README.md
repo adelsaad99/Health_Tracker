@@ -62,9 +62,44 @@ pip install -r requirements.txt
 
 ## 🖼️ Demo Screenshot
 
-<p align="center">
-  <img src="./static/demo-screenshot.png" alt="Health Tracker Demo" width="800"/>
-</p>
+# Clone the repository
+git clone <your-repo-link>
+cd Health_Tracker
+
+# Create virtual environment
+python -m venv venv
+
+# Activate environment
+# Windows
+.\venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+
+## 🖼️ Demo Screenshot
+
+![Health Tracker Demo](./static/demo-screenshot.png)
+
+
+
+
+Health_Tracker/
+├── app.py
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── dashboard.html
+│   ├── form.html
+│   └── edit.html
+├── static/
+│   └── style.css
+├── .env
+├── requirements.txt
+├── Procfile
+└── README.md
 
 
 
